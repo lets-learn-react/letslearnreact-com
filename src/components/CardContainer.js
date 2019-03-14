@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import Grid from '@material-ui/core/Grid'
 import CardComponent from './CardComponent'
 
-function CardContainer (props) {
+export default (props) => {
   const { cards } = props
   const { classes } = props
 
@@ -17,5 +17,3 @@ function CardContainer (props) {
     </div>
   )
 }
-
-export default CardContainer

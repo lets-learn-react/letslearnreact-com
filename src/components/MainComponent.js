@@ -2,7 +2,7 @@ import React from 'react'
 import CardContainer from './CardContainer'
 import AlbumContent from './AlbumContent'
 
-function MainComponent (props) {
+export default props => {
   const { classes } = props
   const { cards } = props
 
@@ -13,5 +13,3 @@ function MainComponent (props) {
     </main>
   )
 }
-
-export default MainComponent
