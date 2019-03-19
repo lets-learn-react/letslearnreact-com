@@ -4,9 +4,9 @@ import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 
 
-export default props => (
-  <div className={props.classes.heroUnit}>
-  <div className={props.classes.heroContent}>
+export default ({ classes }) => (
+  <div className={classes.heroUnit}>
+  <div className={classes.heroContent}>
     <Typography component='h1' variant='h2' align='center' color='textPrimary' gutterBottom>
           Album layout
     </Typography>
@@ -15,7 +15,7 @@ export default props => (
           Make it short and sweet, but not too short so folks don&apos;t simply skip over it
           entirely.
     </Typography>
-    <div className={props.classes.heroButtons}>
+    <div className={classes.heroButtons}>
       <Grid container spacing={16} justify='center'>
         <Grid item>
           <Button variant='contained' color='primary'>
