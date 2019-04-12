@@ -11,6 +11,7 @@ import JobModalNew from './JobModalNew';
 
 class CardComponent extends React.Component {
 
+
   constructor(props) {
     super(props)
     this.state = { isModalOpen: false }
@@ -39,6 +40,7 @@ class CardComponent extends React.Component {
         <CardContent className={classes.cardContent}>
           <Typography gutterBottom variant='h5' component='h2'>
             Heading
+
         </Typography>
           <Typography>
             This is a media card. You can use this section to describe the content.

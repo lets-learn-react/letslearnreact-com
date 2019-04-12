@@ -4,10 +4,10 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import CameraIcon from '@material-ui/icons/PhotoCamera'
 
-export default props => (
-  <AppBar position='static' className={props.classes.appBar}>
+export default ({ classes }) => (
+  <AppBar position='static' className={classes.appBar}>
     <Toolbar>
-      <CameraIcon className={props.classes.icon} />
+      <CameraIcon className={classes.icon} />
       <Typography variant='h6' color='inherit' noWrap>
         Album layout
         </Typography>
