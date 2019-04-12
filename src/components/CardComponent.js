@@ -8,9 +8,7 @@ import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 
 
-export default props => {
-  const { card } = props;
-  const { classes } = props;
+export default ({ card, classes }) => {
   return (<Grid item key={card} sm={6} md={4} lg={3}>
     <Card className={classes.card}>
       <CardMedia

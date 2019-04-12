@@ -2,8 +2,8 @@ import React from 'react'
 import Typography from '@material-ui/core/Typography'
 
 
-export default props => (
-  <footer className={props.classes.footer}>
+export default ({ classes }) => (
+  <footer className={classes.footer}>
     <Typography variant='h6' align='center' gutterBottom>
       Footer
         </Typography>
