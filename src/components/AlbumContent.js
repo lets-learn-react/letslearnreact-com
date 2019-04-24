@@ -3,8 +3,7 @@ import Button from '@material-ui/core/Button'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 
-
-export default ({ classes: {heroUnit, heroContent, heroButtons} }) => (
+export default ({ classes: { heroUnit, heroContent, heroButtons } }) => (
   <div className={heroUnit}>
     <div className={heroContent}>
       <Typography component='h1' variant='h2' align='center' color='textPrimary' gutterBottom>

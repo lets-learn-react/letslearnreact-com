@@ -6,29 +6,22 @@ import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
-import JobModal from './JobModal';
-import JobModalNew from './JobModalNew';
+import JobModalNew from './JobModalNew'
 
 class CardComponent extends React.Component {
-
-
-  constructor(props) {
+  constructor (props) {
     super(props)
+    this.toggleJobModal = this.toggleJobModal.bind(this)
     this.state = { isModalOpen: false }
   }
 
-  openJobModal() {
-    this.setState({ isModalOpen: true })
+  toggleJobModal () {
+    this.setState({ isModalOpen: !this.state.isModalOpen })
   }
 
-  closeJobModal() {
-    this.setState({ isModalOpen: false })
-  }
-
-  render() {
-
-    const { card } = this.props;
-    const { classes } = this.props;
+  render () {
+    const { card } = this.props
+    const { classes } = this.props
 
     return (<Grid item key={card} sm={6} md={4} lg={3}>
       <Card className={classes.card}>
@@ -41,26 +34,23 @@ class CardComponent extends React.Component {
           <Typography gutterBottom variant='h5' component='h2'>
             Heading
 
-        </Typography>
+          </Typography>
           <Typography>
             This is a media card. You can use this section to describe the content.
-        </Typography>
+          </Typography>
         </CardContent>
         <CardActions>
-          <Button size='small' color='primary' onClick={() => this.openJobModal()}>
+          <Button size='small' color='primary' onClick={this.toggleJobModal}>
             View
-        </Button>
-          {/* <JobModal isOpen={this.state.isModalOpen} onClose={() => this.closeJobModal()}></JobModal> */}
-          <JobModalNew isOpen={this.state.isModalOpen} onClose={() => this.closeJobModal()}></JobModalNew>
+          </Button>
+          <JobModalNew isOpen={this.state.isModalOpen} onClose={this.toggleJobModal} />
           <Button size='small' color='primary'>
             Edit
-        </Button>
+          </Button>
         </CardActions>
       </Card>
     </Grid>)
-
   }
 }
 
-
-export default CardComponent;
+export default CardComponent

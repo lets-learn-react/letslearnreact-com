@@ -10,7 +10,7 @@ export default ({ classes }) => (
       <CameraIcon className={classes.icon} />
       <Typography variant='h6' color='inherit' noWrap>
         Album layout
-        </Typography>
+      </Typography>
     </Toolbar>
   </AppBar>
-  )
+)
