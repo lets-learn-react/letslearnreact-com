@@ -12,3 +12,35 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.splash-page{  
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #000000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.splash-page h1{  
+  font-size: 45px;
+}
+
+.splash-header {
+  display: flex;
+  justify-content: center;
+}
+
+.projects {
+  min-height: 100vh; 
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.projects > div {
+  align-self: start;
+}
