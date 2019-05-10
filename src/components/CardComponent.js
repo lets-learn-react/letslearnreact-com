@@ -22,6 +22,7 @@ class CardComponent extends React.Component {
   render () {
     const { card } = this.props
     const { classes } = this.props
+    const { jobModalFields } = this.props
 
     return (<Grid item key={card} sm={6} md={4} lg={3}>
       <Card className={classes.card}>
@@ -32,18 +33,18 @@ class CardComponent extends React.Component {
         />
         <CardContent className={classes.cardContent}>
           <Typography gutterBottom variant='h5' component='h2'>
-            Heading
+            {jobModalFields.companyName}
 
           </Typography>
           <Typography>
-            This is a media card. You can use this section to describe the content.
+            {jobModalFields.catchPhrase}
           </Typography>
         </CardContent>
         <CardActions>
           <Button size='small' color='primary' onClick={this.toggleJobModal}>
             View
           </Button>
-          <JobModalNew isOpen={this.state.isModalOpen} onClose={this.toggleJobModal} />
+          <JobModalNew isOpen={this.state.isModalOpen} onClose={this.toggleJobModal} jobModalFields={jobModalFields} />
           <Button size='small' color='primary'>
             Edit
           </Button>
