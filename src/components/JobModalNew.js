@@ -14,14 +14,14 @@ const styles = theme => ({
   }
 })
 
-const JobModalNew = ({ classes, isOpen, onClose }) => (
+const JobModalNew = ({ classes, isOpen, onClose, jobModalFields }) => (
   <Modal
     aria-labelledby='Job description'
     aria-describedby='This is Job Modal'
     open={isOpen}
     onClose={onClose}
   >
-    <JobModalFields className={classes.paper} />
+    <JobModalFields className={classes.paper} jobModalFields={jobModalFields} />
   </Modal>
 )
 

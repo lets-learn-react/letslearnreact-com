@@ -27,31 +27,31 @@ let companyStyle = {
   width: '80%'
 }
 
-export default ({ className }) => {
+export default ({ className, jobModalFields }) => {
   return (
 
     <div style={headerStyle} className={className}>
       <div style={container}>
         <div style={divStyle}>
           <span>
-                        #Designation
+            {jobModalFields.designation}
           </span>
           <span style={styleRight}>
-                        #Location
+            {jobModalFields.location}
           </span>
         </div>
         <div style={divStyle}>
-          <span style={companyStyle}>#CompanyName</span>
+          <span style={companyStyle}>{jobModalFields.companyName}</span>
           <span style={styleRight}>
-                        #DayAdded
+            {jobModalFields.dayAdded} days ago
           </span>
           <div>
-            <span>#ShiftType</span>
+            <span>{jobModalFields.shiftType}</span>
           </div>
         </div>
 
         <div style={breakStyle}>
-          <h3>#Job Description</h3>
+          <h3>{jobModalFields.descripton}</h3>
         </div>
       </div>
     </div>
